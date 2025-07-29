@@ -1,24 +1,29 @@
 """
-See moodul sisaldab funktsioone, mis kuvavad erinevaid ekraane ja käsitlevad
-kasutaja sisestusi terminalipõhises mängus, kasutades curses teeki.
-Funktsioonid:
-    - display_startup_screen(stdscr): Kuvab mängu käivitusekraani ja ootab, kuni kasutaja 
-      vajutab suvalist klahvi.
-    - display_screen(stdscr, text, choices=None): Kuvab ekraani koos antud tekstiga ja valikutega.
-    - get_user_choice(stdscr, num_choices): Küsib kasutajalt valikut ja tagastab selle.
+This module contains functions that display various screens and handle
+user input in the terminal-based game using the `curses` library.
+
+Functions:
+    - display_startup_screen(stdscr): Displays the game's startup screen and waits
+      for the user to press any key.
+    - display_screen(stdscr, text, choices=None): Displays a screen with the given text and choices.
+    - get_user_choice(stdscr, num_choices): Prompts the user for a choice and returns it.
 """
 
-import curses # pylint: disable=unused-import
+import curses  # pylint: disable=unused-import
 import textwrap
 
 def display_screen(stdscr, text, choices=None, hint=None, start_line=0):
     """
-    Kuvab ekraani koos antud tekstiga ja valikutega.
+    Displays a screen with the given text and optional choices.
+
     Args:
-        stdscr: curses ekraani objekt, mida kasutatakse ekraani värskendamiseks.
-        text (str): Kuvatav tekst.
-        choices (list, optional): Valikute loend, kus iga valik on sõnastik, mis 
-                                  sisaldab 'text' võtit. Vaikimisi None.
+        stdscr: The curses screen object used to refresh the display.
+        text (str): The text to display.
+        choices (list, optional): A list of choices, where each choice is a dictionary
+                                  containing a 'text' key. Defaults to None.
+        hint (str, optional): Optional hint text to display below the main text.
+        start_line (int, optional): The line number from which to start rendering. Defaults to 0.
+
     Returns:
         None
     """
