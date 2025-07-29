@@ -1,47 +1,47 @@
-# terminal-mäng
+# terminal-game
 
-## Ülevaade
+## Overview
 
-See projekt on tekstipõhine terminalimäng, kus mängijad liiguvad läbi loo, tehes valikuid, mis mõjutavad tulemust. Mängul on otsustuspuu struktuur, mis viib erinevate lõppudeni, sõltuvalt mängija otsustest.
+This project is a text-based terminal game where players progress through a story by making choices that influence the outcome. The game has a decision tree structure that leads to different endings depending on the player's decisions.
 
-## Projekti struktuur
+## Project Structure
 
 ```txt
 terminal-game
 ├── src
-│   ├── game.py          # Mängu peamine käivituspunkt
-│   ├── screens.py       # Funktsioonid erinevate ekraanide kuvamiseks
-│   └── decision_tree.py  # Määratleb otsustuspuu struktuuri
-├── requirements.txt      # Loetleb sõltuvused
-└── README.md             # Projekti dokumentatsioon
+│   ├── game.py          # Main entry point of the game
+│   ├── screens.py       # Functions for displaying various screens
+│   └── decision_tree.py  # Defines the decision tree structure
+├── requirements.txt      # Lists dependencies
+└── README.md             # Project documentation
 ```
 
-## Paigaldamine
+## Installation
 
-Mängu käivitamiseks peate installima vajalikud sõltuvused. Seda saate teha, käivitades oma terminalis järgmise käsu:
+To run the game, you need to install the required dependencies. You can do this by running the following command in your terminal:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Mängu käivitamine
+## Running the Game
 
-Pärast sõltuvuste installimist saate mängu alustada, käivitades järgmise käsu:
+After installing the dependencies, you can start the game by running the following command:
 
 ```bash
 python src/game.py
 ```
 
-## Mängu omadused
+## Game Features
 
-- **Tervitus**: Mäng algab kaasahaarava tervitusekraaniga, mis seab seikluse tooni.
-- **Otsustuspuu**: Mängijad teevad valikuid, mis viivad loo erinevatele radadele, mille tulemuseks on erinevad lõpud.
-- **Narratiivsed ekraanid**: Mäng sisaldab mitmeid narratiivseid ekraane, mis rikastavad jutustamiskogemust.
+- **Welcome Screen**: The game begins with an engaging welcome screen that sets the tone for the adventure.
+- **Decision Tree**: Players make choices that branch the story in different directions, leading to various endings.
+- **Narrative Screens**: The game includes multiple narrative screens that enrich the storytelling experience.
 
-## Kaasamine
+## Contributing
 
-Kui soovite projekti panustada, esitage julgelt tõmbepäring või avage arutelu jaoks probleem.
+If you'd like to contribute to the project, feel free to submit a pull request or open an issue for discussion.
 
-## Litsents
+## License
 
-See projekt on avatud lähtekoodiga ja saadaval MIT litsentsi alusel.
+This project is open source and available under the MIT License.
