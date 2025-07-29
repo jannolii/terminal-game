@@ -1,18 +1,18 @@
 """
-See on peamine fail, mis käivitab mängu. See kasutab curses teeki, et kuvada mängu terminalis.
+This is the main file that launches the game. It uses the `curses` library to render
+the game in the terminal.
 
-Funktsioonid:
-    main(stdscr): Peamine funktsioon, mis initsialiseerib mängu, töötleb kasutaja sisendit 
-    ja navigeerib otsustuspuu kaudu.
+Functions:
+    main(stdscr): The main function that initializes the game, handles user input,
+    and navigates through the decision tree.
 
-Moodulid:
-    curses: Moodul terminalipõhiste kasutajaliideste loomiseks.
-    screens: Kohandatud moodul ekraanide kuvamiseks ja kasutaja valikute saamiseks.
-    decision_tree: Kohandatud moodul, mis määratleb DecisionTree klassi, mida kasutatakse 
-    mängu navigeerimiseks.
+Modules:
+    curses: Module for creating terminal-based user interfaces.
+    screens: Custom module for displaying screens and capturing user choices.
+    decision_tree: Custom module that defines the DecisionTree class used for 
+    navigating the game.
 """
 
-from calendar import c
 import curses
 
 from screens import display_screen
@@ -20,14 +20,14 @@ from decision_tree import DecisionMap
 
 def main(stdscr):
     """
-    Peafunktsioon terminalimängu käivitamiseks.
+    Main function to launch the terminal game.
 
-    Argumendid:
-        stdscr: Aken, mis esindab terminali ekraani, mida pakub curses teek.
+    Arguments:
+        stdscr: The window representing the terminal screen, provided by the curses library.
 
-    See funktsioon initsialiseerib mängu, kuvades käivitusekraani, luues otsustuspuu
-    ja navigeerides puu kaudu kasutaja valikute põhjal, kuni jõutakse lehesõlmeni. 
-    Lõpuekraan kuvatakse ja oodatakse klahvivajutust enne väljumist.
+    This function initializes the game by displaying the welcome screen, creating the decision tree,
+    and navigating through it based on the player's choices until a leaf node is reached.
+    The final screen is shown, and the game waits for a key press before exiting.
     """
     # Hide the cursor
     curses.curs_set(0)
